@@ -19,9 +19,9 @@ Student_Number = {'Question': 'What is your student id number?',
 'placeholder': '[Student Number]'}
 
 # contains the question, list of available options and placeholder text for Program of student
-Program = {'Question': 'Which program are you writing this report for?',
-'options': ["UG", "PG"],
-'placeholder': "[Program]"}
+# Program = {'Question': 'Which program are you writing this report for?',
+# 'options': ["UG", "PG"],
+# 'placeholder': "[Program]"}
 
 # contains the question and placeholder text for the date
 Date = {'Question': 'What is the date today?',
