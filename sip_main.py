@@ -24,7 +24,7 @@ if 'Context' not in st.session_state:
     'Student_Name' : "[Student Name]",
     'Student_Number' : '[Student Number]',
     'Year' : report_year_ug,
-    'Program' : '[Program]',
+    'Program' : 'UG',
 	'Student' : 'undergraduate'}
 
 st.markdown("Enter your information here for the SIP Report Template:")
@@ -37,7 +37,7 @@ st.session_state['Context']['Student_Name'] = st.text_input(Student_Name['Questi
 
 st.session_state['Context']['Student_Number'] = st.text_input(Student_Number['Question'], key='student_no',placeholder=Student_Number['placeholder'])
 
-st.session_state['Context']['Program'] = st.selectbox(Program['Question'], Program['options'], index=None,placeholder=Program['placeholder'])
+#st.session_state['Context']['Program'] = st.selectbox(Program['Question'], Program['options'], index=None,placeholder=Program['placeholder'])
 
 #st.session_state['Context']['Date'] = st.text_input(Date['Question'], key='date',placeholder=Date['placeholder'])
 
