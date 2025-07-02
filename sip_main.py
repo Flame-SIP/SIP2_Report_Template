@@ -20,7 +20,7 @@ if 'Context' not in st.session_state:
 	'Faculty_Advisor': '[Faculty Advisor]',
 	'Org_Advisor' : '[Organization Advisor]',
     'Org_Name' : '[Organization Name]',
-    'Date' : 'July 2024',
+    'Date' : 'July 2025',
     'Student_Name' : "[Student Name]",
     'Student_Number' : '[Student Number]',
     'Year' : report_year_ug,
@@ -52,27 +52,27 @@ if st.button("Submit Form"):
 	if st.session_state['Context']['Title_of_Report']:
 		if st.session_state['Context']['Student_Name']:
 			if st.session_state['Context']['Student_Number']:
-				if st.session_state['Context']['Program']:
-					# change year based on the program
-					if st.session_state['Context']['Program'] == 'UG':
-						st.session_state['Context']['Year'] = report_year_ug
-						st.session_state['Context']['Student'] = 'undergraduate'
-					if st.session_state['Context']['Program'] == 'PG':
-						st.session_state['Context']['Year'] = report_year_pg
-						st.session_state['Context']['Student'] = 'postgraduate'
-					if st.session_state['Context']['Year']:
-						if st.session_state['Context']['Date']:
-							if st.session_state['Context']['Faculty_Advisor']:
-								if st.session_state['Context']['Org_Advisor']:
-									if st.session_state['Context']['Org_Name']:
-										doc = render_docx(st.session_state['Context'])
-										bio = io.BytesIO()
-										doc.save(bio)
-										file_name = f"{st.session_state['Context']['Student_Name']}_SIP.docx"
+				# if st.session_state['Context']['Program']:
+				# 	# change year based on the program
+				# 	if st.session_state['Context']['Program'] == 'UG':
+				# 		st.session_state['Context']['Year'] = report_year_ug
+				# 		st.session_state['Context']['Student'] = 'undergraduate'
+				# 	if st.session_state['Context']['Program'] == 'PG':
+				# 		st.session_state['Context']['Year'] = report_year_pg
+				# 		st.session_state['Context']['Student'] = 'postgraduate'
+				if st.session_state['Context']['Year']:
+					if st.session_state['Context']['Date']:
+						if st.session_state['Context']['Faculty_Advisor']:
+							if st.session_state['Context']['Org_Advisor']:
+								if st.session_state['Context']['Org_Name']:
+									doc = render_docx(st.session_state['Context'])
+									bio = io.BytesIO()
+									doc.save(bio)
+									file_name = f"{st.session_state['Context']['Student_Name']}_SIP.docx"
 
-										st.download_button(label="Download Template Report",
-											data=bio.getvalue(),
-											file_name= file_name,
-											mime='docx')
+									st.download_button(label="Download Template Report",
+										data=bio.getvalue(),
+										file_name= file_name,
+										mime='docx')
 
 st.markdown("*if you do not get a button to download the template after submitting the form, please check if you have filled information in all the above mentioned fields.")
