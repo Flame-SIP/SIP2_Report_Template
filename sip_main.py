@@ -23,7 +23,7 @@ if 'Context' not in st.session_state:
     'Date' : 'July 2025',
     'Student_Name' : "[Student Name]",
     'Student_Number' : '[Student Number]',
-    'Year' : report_year_ug,
+    'Year' : '2022-26',
     'Program' : 'UG',
 	'Student' : 'undergraduate'}
 
