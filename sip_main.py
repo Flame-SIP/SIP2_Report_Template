@@ -20,10 +20,10 @@ if 'Context' not in st.session_state:
 	'Faculty_Advisor': '[Faculty Advisor]',
 	'Org_Advisor' : '[Organization Advisor]',
     'Org_Name' : '[Organization Name]',
-    'Date' : 'July 2025',
+    'Date' : 'July 2026',
     'Student_Name' : "[Student Name]",
     'Student_Number' : '[Student Number]',
-    'Year' : '2022-26',
+    'Year' : '2023-27',
     'Program' : 'UG',
 	'Student' : 'undergraduate'}
 
