@@ -25,7 +25,7 @@ Student_Number = {'Question': 'What is your student id number?',
 
 # contains the question and placeholder text for the date
 Date = {'Question': 'What is the date today?',
-'placeholder': 'eg: 29 May 2024'}
+'placeholder': 'eg: 29 May 2026'}
 
 # contains the question and placeholder text for the name of faculty advisor
 Faculty_Advisor = {'Question': 'Full name of Faculty Advisor. Add the appropriate honorific (Prof. or Professor) in front of their name.',
